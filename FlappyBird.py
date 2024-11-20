@@ -49,21 +49,26 @@ gravity = 0.25
 bird_movement = 0
 screen = pygame.display.set_mode((576,1024))
 
+#Download assets from repo and change file path to new location
 background = pygame.image.load(r"C:\Users\Janan\Downloads\flappy-bird-assets-master\sprites\background-day.png").convert()
 background = pygame.transform.scale2x(background)
 
+#Download assets from repo and change file path to new location
 bird = pygame.image.load(r"C:\Users\Janan\Downloads\flappy-bird-assets-master\sprites\IMG_0047.png").convert_alpha()
 bird = pygame.transform.scale2x(bird)
 bird_rect = bird.get_rect(center = (100,512))
 
+#Download assets from repo and change file path to new location
 floor_base = pygame.image.load(r"C:\Users\Janan\Downloads\flappy-bird-assets-master\sprites\base.png").convert()
 floor_base = pygame.transform.scale2x(floor_base)
 floor_x_pos = 0
 
+#Download assets from repo and change file path to new location
 message = pygame.image.load(r"C:\Users\Janan\Downloads\flappy-bird-assets-master\sprites\message.png").convert_alpha()
 message = pygame.transform.scale2x(message)
 game_over_rect = message.get_rect(center=(288,512))
 
+#Download assets from repo and change file path to new location
 pipe_surface = pygame.image.load(r"C:\Users\Janan\Downloads\flappy-bird-assets-master\sprites\pipe-green.png")
 pipe_surface = pygame.transform.scale2x(pipe_surface)
 pipe_list = []
@@ -71,6 +76,7 @@ pipe_height = [400,600,800]
 SPAWNPIPE = pygame.USEREVENT
 pygame.time.set_timer(SPAWNPIPE,1200)
 
+#Download assets from repo and change file path to new location
 flap_sound = pygame.mixer.Sound(r"C:\Users\Janan\Downloads\flappy-bird-assets-master\audio\wing.wav")
 die_sound = pygame.mixer.Sound(r"C:\Users\Janan\Downloads\flappy-bird-assets-master\audio\die.wav")
 
@@ -117,5 +123,3 @@ while True:
         floor_x_pos = 0
     pygame.display.update()
     clock.tick(120)
-    
-    
